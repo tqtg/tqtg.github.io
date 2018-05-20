@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="description" content="Quoc-Tuan personal website">
+	<meta name="keywords" content="machine learning,text mining,natural language processing,social network,data analytics,deep learning,reinforcement learning,computer vision">
+	<meta name="author" content="Quoc-Tuan Truong">
+	<link rel="stylesheet" type="text/css" href="./assets/basic-profile.css" title="Basic Profile" media="all">
+	<title>Quoc-Tuan Truong</title>
+
+
+    <style>
+        /*th, td {*/
+            /*padding: 6px;*/
+        /*}*/
+        .one
+        {
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+        .two {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+<div id="wrap">
+	<div id="sidebar">
+		<a href="https://tqtg.github.io/assets/me.jpg"><img src="./assets/me.jpg"  width="70%" height="70%" style="border: none;" alt="Quoc-Tuan"></a>
+        
+        <p>Contact: <a href="mailto:qttruong.2017@smu.edu.sg">qttruong.2017@smu.edu.sg</a></p>
+        
+        <p>Here you can find my <a href="https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf"> resume </a> </p>
+        
+	
+	</div>
+
+	<div id="content">
+		<h2>Quoc-Tuan Truong</h2>
+		
+        <p>
+            I'm a PhD candidate at School of Information Systems, Singapore Management University (SMU) advised by <a href="http://www.hadylauw.com/">Prof. Hady W. Lauw</a>, and working under <a href="https://preferred.ai/"> Perferred.AI </a> research project.
+
+            My research interests include machine learning, text mining and social network data analytics, with a focus on mining user preferences from review text and images.
+        </p>
+            I completed my Bachelor degree in Computer Science at University of Engineering and Technology, Vietnam National University, Hanoi.
+        <p>
+
+        </p>
+        
+        <p>
+            More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ&hl=en"> Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan"> DBLP</a>.
+        </p>
+
+        <h2>Publications</h2>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+            <tr onmouseout="vscnn_stop()" onmouseover="vscnn_start()">
+                <td width="25%">
+                    <div class="one">
+                        <div class="two" id="vscnn" style="opacity: 0;"><img src="./assets/acmmm17/cnn.png" width="150" height="150"></div>
+                        <img src="./assets/acmmm17/fc.png" width="150" height="150">
+                    </div>
+                    <script type="text/javascript">
+                        function vscnn_start() {
+                            document.getElementById('vscnn').style.opacity = "1";
+                        }
+                        function vscnn_stop() {
+                            document.getElementById('vscnn').style.opacity = "0";
+                        }
+                        sna_stop()
+                    </script>
+
+                </td>
+                <td valign="top" width="75%">
+                    <p><a href="http://www.hadylauw.com/publications/acmmm17.pdf">
+                        <strong>Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN</strong></a><br>
+                        <strong>Quoc-Tuan Truong</strong> and <a href="http://www.hadylauw.com/" >Hady W. Lauw</a> <br>
+                        <em>ACM Multimedia (ACMMM)</em>, 2017 <font color="green"><strong>(Long)</strong></font> <br>
+                        <a href="http://www.hadylauw.com/publications/acmmm17.pdf">pdf</a>
+                        /
+                        <a href="https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17">bib</a>
+                        /
+                        <a href="">code</a>
+                        /
+                        <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf">poster</a>
+                        /
+                        <a href="https://preferred.ai/visual-sentiment-analysis/">blog</a>
+                    </p><p></p>
+                    <p>
+                        We observe that the sentiment captured within an image may be affected by three factors: image factor,
+                        user factor, and item factor. Essentially, only the first factor had been taken into account by previous works on visual sentiment
+                        analysis. We develop item-oriented and user-oriented Convolutional Neural Networks (CNN) that better capture the interaction of image
+                        features with specific expressions of users or items.
+                    </p>
+                </td>
+            </tr>
+
+        </table>
+
+		<p class="credits">Last updated in May 2018<br>
+	</div>
+
+</div>
+
+
+
+
+</body></html>
