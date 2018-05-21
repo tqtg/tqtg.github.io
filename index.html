@@ -11,18 +11,19 @@
 
 
     <style>
-        /*th, td {*/
-            /*padding: 6px;*/
-        /*}*/
+        table { 
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
         .one
         {
-            width: 160px;
-            height: 160px;
+            width: 165px;
+            height: 105px;
             position: relative;
         }
         .two {
-            width: 160px;
-            height: 160px;
+            width: 165px;
+            height: 105px;
             position: absolute;
             transition: opacity .2s ease-in-out;
             -moz-transition: opacity .2s ease-in-out;
@@ -59,43 +60,42 @@
 	<div id="content">
 		<h2>Quoc-Tuan Truong</h2>
 		
-        <p>
-            I'm a PhD candidate at <a href="https://sis.smu.edu.sg/">School of Information Systems</a>, <a href="https://www.smu.edu.sg/">Singapore Management University (SMU)</a> advised by <a href="http://www.hadylauw.com/">Prof. Hady W. Lauw</a>, and working on <a href="https://preferred.ai/"> Preferred.AI </a> research project.
-
-            My research interests include machine learning, text mining and social network data analytics, with a focus on mining user preferences from review text and images.
+        <p style="margin-bottom: 15px;">
+            I'm a PhD candidate at <a href="https://sis.smu.edu.sg/">School of Information Systems</a>, <a href="https://www.smu.edu.sg/">Singapore Management University (SMU)</a> advised by <a href="http://www.hadylauw.com/">Prof. Hady W. Lauw</a>, and working on <a href="https://preferred.ai/"> Preferred.AI </a> research project. My research interests include machine learning, text mining and social network data analytics, with a focus on mining user preferences from review text and images.
         </p>
-            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav" onClick="ga('send', 'event', 'content', 'view', 'VAV');">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx">Prof. Xuan-Hieu Phan</a>.
-        <p>
 
+        <p style="margin-bottom: 15px;">
+            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav" onClick="ga('send', 'event', 'content', 'view', 'VAV');">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx">Prof. Xuan-Hieu Phan</a>.
         </p>
         
-        <p>
+        <p style="margin-bottom: 15px;">
             More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ" onClick="ga('send', 'event', 'content', 'view', 'scholar');">Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan" onClick="ga('send', 'event', 'content', 'view', 'dblp');">DBLP</a>.
         </p>
 
         <h2>Publications</h2>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" onmouseout="vscnn_stop()" onmouseover="vscnn_start()">
+            <script type="text/javascript">
+                function vscnn_start() {
+                    document.getElementById('vscnn').style.opacity = "1";
+                }
+                function vscnn_stop() {
+                    document.getElementById('vscnn').style.opacity = "0";
+                }
+                sna_stop()
+            </script>
 
-            <tr onmouseout="vscnn_stop()" onmouseover="vscnn_start()">
+            <tr valign="top">
                 <td width="25%">
                     <div class="one">
-                        <div class="two" id="vscnn" style="opacity: 0;"><img src="./assets/acmmm17/cnn.png" width="150" height="150"></div>
-                        <img src="./assets/acmmm17/fc.png" width="150" height="150">
+                        <div class="two" id="vscnn" style="opacity: 0;"><img src="./assets/acmmm17/cnn.png" width="150" height="105"></div>
+                        <img src="./assets/acmmm17/fc.png" width="150" height="105">
                     </div>
-                    <script type="text/javascript">
-                        function vscnn_start() {
-                            document.getElementById('vscnn').style.opacity = "1";
-                        }
-                        function vscnn_stop() {
-                            document.getElementById('vscnn').style.opacity = "0";
-                        }
-                        sna_stop()
-                    </script>
 
                 </td>
-                <td valign="top" width="75%">
-                    <p><a href="https://www.dropbox.com/s/fzcypxsx3ipmnw7/frp528-truong.pdf" onClick="ga('send', 'event', 'publications', 'pdf', 'acmmm17');">
+                <td width="75%">
+                    <p>
+                        <a href="https://www.dropbox.com/s/fzcypxsx3ipmnw7/frp528-truong.pdf" onClick="ga('send', 'event', 'publications', 'pdf', 'acmmm17');">
                         <strong>Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN</strong></a><br>
                         <strong>Quoc-Tuan Truong</strong> and <a href="http://www.hadylauw.com/" >Hady W. Lauw</a> <br>
                         <em>ACM Multimedia (ACMMM)</em>, 2017 <font color="green"><strong>(Long)</strong></font> <br>
@@ -108,19 +108,23 @@
                         <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf" onClick="ga('send', 'event', 'publications', 'poster', 'acmmm17');">poster</a>
                         /
                         <a href="https://preferred.ai/visual-sentiment-analysis/" onClick="ga('send', 'event', 'publications', 'blog', 'acmmm17');">blog</a>
-                    </p><p></p>
-                    <p>
-                        We observe that the sentiment captured within an image may be affected by three factors: image factor,
-                        user factor, and item factor. Essentially, only the first factor had been taken into account by previous works on visual sentiment
-                        analysis. Thus, we develop item-oriented and user-oriented Convolutional Neural Networks (CNN) that better capture the interaction of image
-                        features with specific expressions of users or items.
                     </p>
                 </td>
             </tr>
-
+            <tr>
+                <td colspan="2">
+                    <p>
+                        We observe that the sentiment captured within an image may be affected by three factors: image factor, user factor, and item
+                        factor. Essentially, only the first factor had been taken into account by previous works on visual sentiment analysis.
+                        Thus, we develop item-oriented and user-oriented Convolutional Neural Networks (CNN) that better capture the interaction
+                        of image features with specific expressions of users or items.
+                    </p>
+                </td>
+            </tr>
         </table>
 
-		<p class="credits">Last updated in May 2018.<br>
+        
+		<p class="credits">Last updated in May 2018.<br></p>
 	</div>
 
 </div>
