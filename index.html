@@ -38,6 +38,13 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-70444606-4');
+
+        var a = document.getElementsByTagName('a');
+        for (i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+                gtag('event', this.href);
+            }
+        }
     </script>
 
 </head>
@@ -52,7 +59,7 @@
         
         <p><strong>Email:</strong> <a href="mailto:qttruong.2017@smu.edu.sg">qttruong.2017@smu.edu.sg</a></p>
         
-        <p>Here you can find my <a href="https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf" onclick="ga('send', 'event', 'content', 'view', 'CV');">CV</a> </p>
+        <p>Here you can find my <a href="https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf">CV</a> </p>
         
 	
 	</div>
@@ -65,11 +72,11 @@
         </p>
 
         <p style="margin-bottom: 15px;">
-            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav" onclick="ga('send', 'event', 'content', 'view', 'VAV');">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx">Prof. Xuan-Hieu Phan</a>.
+            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx">Prof. Xuan-Hieu Phan</a>.
         </p>
         
         <p style="margin-bottom: 30px;">
-            More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ" onclick="ga('send', 'event', 'content', 'view', 'scholar');">Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan" onclick="ga('send', 'event', 'content', 'view', 'dblp');">DBLP</a>.
+            More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ">Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan">DBLP</a>.
         </p>
 
         <h2>Publications</h2>
@@ -95,19 +102,19 @@
                 </td>
                 <td width="75%">
                     <p>
-                        <a href="https://www.dropbox.com/s/fzcypxsx3ipmnw7/frp528-truong.pdf" onclick="ga('send', 'event', 'publications', 'pdf', 'acmmm17');">
+                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN">
                         <strong>Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN</strong></a><br>
                         <strong>Quoc-Tuan Truong</strong> and <a href="http://www.hadylauw.com/" >Hady W. Lauw</a> <br>
                         <em>ACM Multimedia (ACMMM)</em>, 2017 <font color="green"><strong>(Long)</strong></font> <br>
-                        <a href="https://www.dropbox.com/s/fzcypxsx3ipmnw7/frp528-truong.pdf" onclick="ga('send', 'event', 'publications', 'pdf', 'acmmm17');">pdf</a>
+                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN">paper</a>
                         /
-                        <a href="https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17" onclick="ga('send', 'event', 'publications', 'bib', 'acmmm17');">bib</a>
+                        <a href="https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17">bib</a>
                         /
-                        <a href="" onclick="ga('send', 'event', 'publications', 'code', 'acmmm17');">code</a>
+                        <a href="">code</a>
                         /
-                        <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf" onclick="ga('send', 'event', 'publications', 'poster', 'acmmm17');">poster</a>
+                        <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf">poster</a>
                         /
-                        <a href="https://preferred.ai/visual-sentiment-analysis/" onclick="ga('send', 'event', 'publications', 'blog', 'acmmm17');">blog</a>
+                        <a href="https://preferred.ai/visual-sentiment-analysis/">blog</a>
                     </p>
                 </td>
             </tr>
@@ -128,8 +135,5 @@
 	</div>
 
 </div>
-
-
-
 
 </body></html>
