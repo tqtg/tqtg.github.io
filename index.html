@@ -39,16 +39,16 @@
 
         gtag('config', 'UA-70444606-4');
 
-        var a = document.getElementsByTagName('a');
-        for (i = 0; i < a.length; i++) {
-            a[i].onclick = function () {
-                gtag('event', this.href);
-            }
+        var trackLink = function (url, category) {
+            gtag('event', 'click', {
+                'event_category': category,
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = url; }
+            });
         }
     </script>
-
 </head>
-
 
 
 
@@ -57,26 +57,24 @@
 	<div id="sidebar">
 		<a href="https://tqtg.github.io/assets/me.jpg"><img src="./assets/me.jpg"  width="80%" height="80%" style="border: none;" alt="Quoc-Tuan"></a>
         
-        <p><strong>Email:</strong> <a href="mailto:qttruong.2017@smu.edu.sg">qttruong.2017@smu.edu.sg</a></p>
+        <p><strong>Email:</strong> <a href="mailto:qttruong.2017@smu.edu.sg" onclick="trackLink('mailto:qttruong.2017@smu.edu.sg', 'info'); return false;">qttruong.2017@smu.edu.sg</a></p>
         
-        <p>Here you can find my <a href="https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf">CV</a> </p>
-        
-	
+        <p>Here you can find my <a href="https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf" onclick="trackLink('https://www.dropbox.com/s/mjky9b0j84phys0/TuanTQ_CV.pdf', 'info'); return false;">CV</a> </p>
 	</div>
 
 	<div id="content">
 		<h2>Quoc-Tuan Truong</h2>
 		
         <p style="margin-bottom: 15px;">
-            I'm a PhD candidate at <a href="https://sis.smu.edu.sg/">School of Information Systems</a>, <a href="https://www.smu.edu.sg/">Singapore Management University (SMU)</a> advised by <a href="http://www.hadylauw.com/">Prof. Hady W. Lauw</a>, and working on <a href="https://preferred.ai/"> Preferred.AI </a> research project. My research interests include machine learning, text mining and social network data analytics, with a focus on mining user preferences from review text and images.
+            I'm a PhD candidate at <a href="https://sis.smu.edu.sg/" onclick="trackLink('https://sis.smu.edu.sg/', 'info'); return false;">School of Information Systems</a>, <a href="https://www.smu.edu.sg/" onclick="trackLink('https://www.smu.edu.sg/', 'info'); return false;">Singapore Management University (SMU)</a> advised by <a href="http://www.hadylauw.com/">Prof. Hady W. Lauw</a>, and working on <a href="https://preferred.ai/"> Preferred.AI </a> research project. My research interests include machine learning, text mining and social network data analytics, with a focus on mining user preferences from review text and images.
         </p>
 
         <p style="margin-bottom: 15px;">
-            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx">Prof. Xuan-Hieu Phan</a>.
+            I completed my Bachelor degree in Computer Science at <a href="https://e.uet.vnu.edu.vn/" onclick="trackLink('https://e.uet.vnu.edu.vn/', 'info'); return false;">University of Engineering and Technology</a>, <a href="https://vnu.edu.vn/eng/" onclick="trackLink('https://vnu.edu.vn/eng/', 'info'); return false;">Vietnam National University, Hanoi</a>. My thesis was on developing a mobile <a href="https://play.google.com/store/apps/details?id=uet.mdnteam.vav" <a href="https://vnu.edu.vn/eng/" onclick="trackLink('https://play.google.com/store/apps/details?id=uet.mdnteam.vav', 'info'); return false;">Virtual Assistant for Vietnamese (VAV)</a> advised by <a href="https://uet.vnu.edu.vn/~hieupx" onclick="trackLink('https://uet.vnu.edu.vn/~hieupx', 'info'); return false;">Prof. Xuan-Hieu Phan</a>.
         </p>
         
         <p style="margin-bottom: 30px;">
-            More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ">Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan">DBLP</a>.
+            More about my publications: <a href="https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ" onclick="trackLink('https://scholar.google.com.sg/citations?user=bzG8TXkAAAAJ', 'info'); return false;">Google Scholar</a> or <a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan" onclick="trackLink('https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan', 'info'); return false;">DBLP</a>.
         </p>
 
         <h2>Publications</h2>
@@ -102,19 +100,21 @@
                 </td>
                 <td width="75%">
                     <p>
-                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN">
+                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN" onclick="trackLink('https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN', 'publications'); return false;">
                         <strong>Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN</strong></a><br>
-                        <strong>Quoc-Tuan Truong</strong> and <a href="http://www.hadylauw.com/" >Hady W. Lauw</a> <br>
+                        <strong>Quoc-Tuan Truong</strong> and <a href="http://www.hadylauw.com/" onclick="trackLink('http://www.hadylauw.com/',
+                        'publications'); return false;">Hady W. Lauw</a> <br>
                         <em>ACM Multimedia (ACMMM)</em>, 2017 <font color="green"><strong>(Long)</strong></font> <br>
-                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN">paper</a>
+                        <a href="https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN" onclick="trackLink('https://www.researchgate.net/publication/320541140_Visual_Sentiment_Analysis_for_Review_Images_with_Item-Oriented_and_User-Oriented_CNN', 'publications'); return false;">paper</a>
                         /
-                        <a href="https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17">bib</a>
+                        <a href="https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17" onclick="trackLink('https://dblp.uni-trier.de/rec/bibtex/conf/mm/TruongL17',
+                        'publications'); return false;">bib</a>
                         /
-                        <a href="">code</a>
+                        <a href="" onclick="trackLink('', 'publications'); return false;">code</a>
                         /
-                        <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf">poster</a>
+                        <a href="https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf" onclick="trackLink('https://www.dropbox.com/s/wmi5a9bwm2bxc1j/poster.pdf', 'publications'); return false;">poster</a>
                         /
-                        <a href="https://preferred.ai/visual-sentiment-analysis/">blog</a>
+                        <a href="https://preferred.ai/visual-sentiment-analysis/" onclick="trackLink('https://preferred.ai/visual-sentiment-analysis/', 'publications'); return false;">blog</a>
                     </p>
                 </td>
             </tr>
