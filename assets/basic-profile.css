@@ -12,7 +12,7 @@ h1,h2,h3{font-weight:700;line-height:1.4em;}
 #content{text-align:left;width:620px;padding-left:40px;padding-right:40px;}
 #sidebar{float:right;width:180px;padding-left:40px;padding-right:40px;border-left:2px solid #ccc;}
 #sidebar ul{list-style:none;margin:0;}
-#sidebar li{list-style:none;font-size:1.2em;margin:0 0 10px;color:#888;}
+#sidebar li{list-style:none;font-size:1.0em;margin:0 0 3px;color:#888;}
 #sidebar li a{font-size:1.0em;}
 #sidebar h2{font-size:1.8em;border-bottom:1px solid #eee;}
 .slogan{color:#888;font-size:1.4em;font-weight:700;margin:0 0 20px 0;letter-spacing:-1px;}
