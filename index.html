@@ -129,10 +129,11 @@
                 </tr>
             </table>
 
-
-
             <h3 style="margin-top: 40px;">Highlights</h3>
-            <ul>
+            <ul id="highlights">
+                <li>
+                    2020.09.04: Invited as PC member for AAAI 2021.
+                </li>
                 <li>
                     2020.08.24: Awarded Dean's List 2020.
                 </li>
@@ -146,8 +147,10 @@
                     2020.07.28: Passed PhD Proposal Defense.
                 </li>
                 <li>
-                    2020.07.10: Awarded <a href="https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-presidential-doctoral-fellowships"
-                        onclick="trackEvent('https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-presidential-doctoral-fellowships', 'view', 'highlights', 'SMU PDF');">SMU Presidential Doctoral Fellowship</a> for AY2020.
+                    2020.07.10: Awarded <a
+                        href="https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-presidential-doctoral-fellowships"
+                        onclick="trackEvent('https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-presidential-doctoral-fellowships', 'view', 'highlights', 'SMU PDF');">SMU
+                        Presidential Doctoral Fellowship</a> for AY2020.
                 </li>
                 <li>
                     2020.05.16: Won Top-1 in Kalapa's Credit Scoring Challenge, together with BeU Team.
@@ -245,6 +248,7 @@
                     2016.06.30: Graduated from VNU-UET.
                 </li>
             </ul>
+            <a onclick="viewMore()" id="viewMore">View less</a>
 
 
             <h3 style="margin-top: 40px;">Publications (<a href="https://dblp.uni-trier.de/pers/hd/t/Truong:Quoc=Tuan"
@@ -261,7 +265,6 @@
                     function vscnn_stop() {
                         document.getElementById('vscnn').style.opacity = "0";
                     }
-                    sna_stop()
                 </script>
 
                 <tr>
@@ -565,6 +568,32 @@
             <p class="credits">Last updated in Sep 2020.<br></p>
         </div>
 
+        <script>
+            function viewMore() {
+                var btnViewMore = document.getElementById("viewMore");
+                var highlights = document.getElementById("highlights").getElementsByTagName("li");
+
+                if (btnViewMore.innerHTML === "View more") {
+                    btnViewMore.innerHTML = "View less";
+                    for (var i = 0; i < highlights.length; ++i) {
+                        highlights[i].style.display = "list-item";
+                    }
+                } else {
+                    btnViewMore.innerHTML = "View more";
+                    for (var i = 0; i < highlights.length; ++i) {
+                        if (i <= 10) {
+                            highlights[i].style.display = "list-item";
+                        } else {
+                            highlights[i].style.display = "none"; 
+                        }
+                    }
+                }
+            }
+
+            window.onload = function () {
+                viewMore();
+            };
+        </script>
 
 </body>
 
