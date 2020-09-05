@@ -258,15 +258,6 @@
                     Scholar</a>)</h3>
 
             <table style="margin-top: 20px" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-                <script type="text/javascript">
-                    function vscnn_start() {
-                        document.getElementById('vscnn').style.opacity = "1";
-                    }
-                    function vscnn_stop() {
-                        document.getElementById('vscnn').style.opacity = "0";
-                    }
-                </script>
-
                 <tr>
                     <td colspan="2">
                         <p style="margin-bottom: 15px;">
@@ -581,7 +572,7 @@
                 } else {
                     btnViewMore.innerHTML = "View more";
                     for (var i = 0; i < highlights.length; ++i) {
-                        if (i <= 10) {
+                        if (i < 10) {
                             highlights[i].style.display = "list-item";
                         } else {
                             highlights[i].style.display = "none"; 
