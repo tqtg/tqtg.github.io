@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="Machine Learning, Deep Learning, Natural Language Processing, Text Mining, Sentiment Analysis, Computer Vision">
     <meta name="author" content="Quoc-Tuan Truong">
-    <link rel="stylesheet" type="text/css" href="./assets/basic-profile.css?v=1.4" title="Basic Profile" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/basic-profile.css?v=1.5" title="Basic Profile" media="all">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <title>Quoc-Tuan Truong</title>
@@ -556,7 +556,7 @@
                 </li>
             </ul>
 
-            <p class="credits">Last updated in Sep 2020.<br></p>
+            <p id="lastUpdated"></p>
         </div>
 
         <script>
@@ -575,14 +575,31 @@
                         if (i < 10) {
                             highlights[i].style.display = "list-item";
                         } else {
-                            highlights[i].style.display = "none"; 
+                            highlights[i].style.display = "none";
                         }
                     }
                 }
             }
 
+            function lastUpdate() {
+                var Httpreq = new XMLHttpRequest();
+
+                Httpreq.addEventListener("load", function lastUpdateListener() {
+                    var jsonObj = JSON.parse(this.responseText);
+                    var date = Date.parse(jsonObj[0].commit.committer.date);
+                    const dateTimeFormat = new Intl.DateTimeFormat('en', {year: 'numeric', month: 'short', day: '2-digit'}) 
+                    const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(date);
+                    
+                    document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}.`;
+                });
+
+                Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits");
+                Httpreq.send();
+            }
+
             window.onload = function () {
                 viewMore();
+                lastUpdate();
             };
         </script>
 
