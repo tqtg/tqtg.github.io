@@ -20,6 +20,7 @@ wc = WordCloud(
     background_color="white",
     max_words=100,
     stopwords=stopwords,
+    min_font_size=4,
     max_font_size=40,
     random_state=34,
 ).generate(text)
