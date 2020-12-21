@@ -19,7 +19,7 @@ Detecting the sentiment expressed by a document is a key task for many applicati
 attention, vis-a-vis visual features or textual attention.
 
 Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN
-Online reviews are prevalent. When recounting their experience with a product, service, or venue, in addition to textual narration, a reviewer frequently includes images as photographic record. While textual sentiment analysis has been widely studied, in this paper we are interested in visual sentiment analysis to infer whether a given image included as part of a review expresses the overall positive or negative sentiment of that review. Visual sentiment analysis can be formulated as image classication using deep learning methods such as Convolutional Neural Networks or CNN. However, we observe that the sentiment captured within an image may be affected by three factors: image factor, user factor, and item factor. Essentially, only the rst factor had been taken into account by previous works on visual sentiment analysis. We develop item-oriented and user-oriented CNN that we hypothesize would beer capture the interaction of image features with specic expressions of users or items. Experiments on images from restaurant reviews show these to be more eective at classifying the sentiments of review images.
+Online reviews are prevalent. When recounting their experience with a product, service, or venue, in addition to textual narration, a reviewer frequently includes images as photographic record. While textual sentiment analysis has been widely studied, in this paper we are interested in visual sentiment analysis to infer whether a given image included as part of a review expresses the overall positive or negative sentiment of that review. Visual sentiment analysis can be formulated as image classification using deep learning methods such as Convolutional Neural Networks or CNN. However, we observe that the sentiment captured within an image may be affected by three factors: image factor, user factor, and item factor. Essentially, only the rst factor had been taken into account by previous works on visual sentiment analysis. We develop item-oriented and user-oriented CNN that we hypothesize would beer capture the interaction of image features with specific expressions of users or items. Experiments on images from restaurant reviews show these to be more effective at classifying the sentiments of review images.
 """
 
 
@@ -50,7 +50,7 @@ wc = WordCloud(
     min_font_size=4,
     max_font_size=40,
     random_state=34,
-).generate(text.lower())
+).generate(text.strip().lower())
 
 plt.figure(figsize=(12, 5))
 plt.imshow(wc, interpolation="bilinear")
