@@ -1,3 +1,4 @@
+text = """
 Sentiment-Oriented Metric Learning for Text-to-Image Retrieval
 In this era of multimedia Web, text-to-image retrieval is a critical function of search engines and visually-oriented online platforms. Traditionally, the task primarily deals with matching a text query with the most relevant images available in the corpus. To an increasing extent, the Web also features visual expressions of preferences, imbuing images with sentiments that express those preferences. Cases in point include photos in online reviews as well as social media. In this work, we study the effects of sentiment information on text-to-image retrieval. Particularly, we present two approaches for incorporating sentiment orientation into metric learning for cross-modal retrieval. Each model emphasizes a hypothesis on how positive and negative sentiment vectors may be aligned in the metric space that also includes text and visual vectors. Comprehensive experiments and analyses on Visual Sentiment Ontology (VSO) and Yelp.com online reviews datasets show that our models significantly boost the retrieval performance as compared to various sentiment-insensitive baselines.
 
@@ -19,3 +20,40 @@ attention, vis-a-vis visual features or textual attention.
 
 Visual Sentiment Analysis for Review Images with Item-Oriented and User-Oriented CNN
 Online reviews are prevalent. When recounting their experience with a product, service, or venue, in addition to textual narration, a reviewer frequently includes images as photographic record. While textual sentiment analysis has been widely studied, in this paper we are interested in visual sentiment analysis to infer whether a given image included as part of a review expresses the overall positive or negative sentiment of that review. Visual sentiment analysis can be formulated as image classication using deep learning methods such as Convolutional Neural Networks or CNN. However, we observe that the sentiment captured within an image may be affected by three factors: image factor, user factor, and item factor. Essentially, only the rst factor had been taken into account by previous works on visual sentiment analysis. We develop item-oriented and user-oriented CNN that we hypothesize would beer capture the interaction of image features with specic expressions of users or items. Experiments on images from restaurant reviews show these to be more eective at classifying the sentiments of review images.
+"""
+
+
+###################################################################################################
+
+
+import os
+import random
+
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+
+
+stopwords = set(STOPWORDS)
+stopwords.add("e")
+stopwords.add("g")
+stopwords.add("acm")
+
+wc = WordCloud(
+    width=500,
+    height=200,
+    background_color="white",
+    max_words=100,
+    stopwords=stopwords,
+    min_font_size=4,
+    max_font_size=40,
+    random_state=34,
+).generate(text.lower())
+
+plt.figure(figsize=(12, 5))
+plt.imshow(wc, interpolation="bilinear")
+plt.axis("off")
+plt.tight_layout()
+plt.savefig("./assets/wc.png")
