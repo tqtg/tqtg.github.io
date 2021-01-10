@@ -44,6 +44,7 @@ stopwords.add("acm")
 wc = WordCloud(
     width=500,
     height=250,
+    margin=2,
     background_color="white",
     max_words=100,
     stopwords=stopwords,
