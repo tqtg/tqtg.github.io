@@ -43,18 +43,17 @@ stopwords.add("acm")
 
 wc = WordCloud(
     width=500,
-    height=250,
+    height=230,
     margin=2,
     background_color="white",
-    max_words=100,
+    max_words=200,
     stopwords=stopwords,
     min_font_size=4,
     max_font_size=40,
     random_state=34,
 ).generate(text.strip().lower())
 
-plt.figure(figsize=(10, 5))
+plt.figure()
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
-plt.tight_layout()
-plt.savefig("./assets/wc.png")
+plt.savefig("./assets/wc.png", bbox_inches="tight", pad_inches=0)
