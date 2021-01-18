@@ -28,25 +28,25 @@ Online reviews are prevalent. When recounting their experience with a product, s
 
 import os
 import random
+import string
 
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
+import multidict
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 
-stopwords = set(STOPWORDS)
-stopwords.add("e")
-stopwords.add("g")
-stopwords.add("acm")
+stopwords = set(STOPWORDS) | set(["acm", "e", "g"])
 
 wc = WordCloud(
     width=500,
     height=230,
     margin=2,
     background_color="white",
-    max_words=200,
+    colormap="gist_heat_r",
+    max_words=100,
     stopwords=stopwords,
     min_font_size=4,
     max_font_size=40,
