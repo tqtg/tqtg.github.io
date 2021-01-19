@@ -31,23 +31,31 @@ import random
 import string
 
 import numpy as np
-from PIL import Image
 import matplotlib.pyplot as plt
 
-import multidict
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 
 
-stopwords = set(STOPWORDS) | set(["acm", "e", "g"])
+rng = np.random.RandomState(34)
+
+
+def color_fn(*args, **kwargs):
+    r = rng.randint(16, 240)
+    g = rng.randint(r // 4 + 1)
+    b = 0
+    return (r, g, b)
+
+
+STOPWORDS.update(["acm", "e", "g"])
 
 wc = WordCloud(
     width=500,
     height=230,
     margin=2,
     background_color="white",
-    colormap="gist_heat_r",
+    color_func=color_fn,
     max_words=100,
-    stopwords=stopwords,
+    stopwords=STOPWORDS,
     min_font_size=4,
     max_font_size=40,
     random_state=34,
