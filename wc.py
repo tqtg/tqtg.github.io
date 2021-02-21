@@ -36,7 +36,7 @@ import string
 import numpy as np
 import matplotlib.pyplot as plt
 
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import WordCloud, STOPWORDS
 
 
 rng = np.random.RandomState(34)
@@ -52,6 +52,7 @@ def color_fn(*args, **kwargs):
 STOPWORDS.update(["acm", "e", "g"])
 
 wc = WordCloud(
+    font_path="./assets/fonts/Roboto-Regular.ttf",
     width=500,
     height=230,
     margin=2,
