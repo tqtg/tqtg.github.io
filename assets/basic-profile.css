@@ -10,9 +10,11 @@ h1,h2,h3{font-weight:700;line-height:1.6em;}
 #wrap{color:#303030;margin:0px auto;padding:0;width:980px;}
 #content{font-size:1.0em;text-align:left;width:880px;padding-left:50px;padding-right:50px;padding-top:50px;}
 ul#highlights{margin-bottom: 5px;}
-ul#highlights li{display:none;list-style-type:">  ";margin:3px 15px;}
-ul#useful li{list-style-type:">  ";margin:3px 15px;}
-ul#papers li{list-style-type:none;padding:0;margin-bottom: 15px;}
+ul#highlights li{display:none;list-style-type:">  ";margin:5px 15px;}
+ul#useful li{list-style-type:">  ";margin:5px 15px;}
+ul#papers li{list-style-type:none;padding-left:10px;margin-bottom: 15px;}
+ul#papers li.conf{border-left:3px solid rgb(53, 106, 159);}
+ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 #lastUpdated{display:block;clear:left;font-size:1.0em;color:#aaa;margin:40px 0;border-top:3px solid #eee;padding-top: 5px;}
 #lastUpdated a{color:#888;}
 .clear{clear:both;}
