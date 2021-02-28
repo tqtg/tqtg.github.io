@@ -7,8 +7,8 @@ h1 a{color:#4682B4;text-transform:none;}
 h2{font-size:2.0em;color:#333;margin:0 0 0px;letter-spacing:-1px;}
 h3{font-size:1.5em;margin:30px 0 20px 0;letter-spacing:-1px;border-bottom:1px solid #eee;}
 h1,h2,h3{font-weight:700;line-height:1.6em;}
-#wrap{color:#303030;margin:0px auto;padding:0;width:980px;}
-#content{font-size:1.0em;width:880px;padding:50px;}
+#wrap{width: 980px;margin:0 auto;}
+#content{font-size:1.0em;padding: 50px;}
 ul#highlights{margin-bottom:5px;}
 ul#highlights li{display:none;list-style-type:">  ";margin:5px 15px;}
 ul#useful li{list-style-type:">  ";margin:5px 15px;}
@@ -30,8 +30,10 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 .bio-col-2 p {text-align:center;}
 
 /* For mobile phones: */
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 600px) {
+  #wrap{width: 100%;}
+  #content{padding:5%;}
   [class*="bio-col-"] {width: 100%;}
-  .bio-col-1 img {width: 100%;margin-top: 10px; margin-bottom: 10px;}
-  .bio-col-2 img {width: 40%;margin-top: 10px;}
+  .bio-col-1 img {width: 100%;margin-bottom: 15px;}
+  .bio-col-2 img {width: 40%;}
 }
