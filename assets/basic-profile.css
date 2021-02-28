@@ -32,8 +32,7 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
-  html {font-size: large;}
   [class*="bio-col-"] {width: 100%;}
-  .bio-col-1 img {width: 100%;}
-  .bio-col-2 img {width: 30%;}
+  .bio-col-1 img {width: 100%;margin-top: 10px; margin-bottom: 10px;}
+  .bio-col-2 img {width: 50%;margin-top: 10px;}
 }
