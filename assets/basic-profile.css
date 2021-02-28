@@ -7,8 +7,8 @@ h1 a{color:#4682B4;text-transform:none;}
 h2{font-size:2.0em;color:#333;margin:0 0 0px;letter-spacing:-1px;}
 h3{font-size:1.5em;margin:30px 0 20px 0;letter-spacing:-1px;border-bottom:1px solid #eee;}
 h1,h2,h3{font-weight:700;line-height:1.6em;}
-#wrap{width: 980px;margin:0 auto;}
-#content{font-size:1.0em;padding: 50px;}
+#wrap{width: 880px;margin:0 auto;}
+#content{font-size:1.0em;padding: 50px 0px 50px;}
 ul#highlights{margin-bottom:5px;}
 ul#highlights li{display:none;list-style-type:">  ";margin:5px 15px;}
 ul#useful li{list-style-type:">  ";margin:5px 15px;}
@@ -19,7 +19,7 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 .clear{clear:both;}
 
 .bio {border-top:3px solid #eee;padding-top: 20px;}
-.row::after {content: "";clear: both;display: block;}
+.bio::after {content: "";clear: both;display: block;}
 
 /* For desktop: */
 .bio-col-1 {width: 80%;float: left;}
@@ -33,7 +33,9 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 @media only screen and (max-width: 600px) {
   #wrap{width: 100%;}
   #content{padding:5%;}
+  .bio {display: flex;flex-direction: column-reverse;}
   [class*="bio-col-"] {width: 100%;}
   .bio-col-1 img {width: 100%;margin-bottom: 15px;}
-  .bio-col-2 img {width: 40%;}
+  .bio-col-2 {margin-bottom: 20px;}
+  .bio-col-2 img {width: 45%;}
 }
