@@ -68,4 +68,4 @@ wc = WordCloud(
 plt.figure()
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
-plt.savefig("./assets/wc.png", bbox_inches="tight", pad_inches=0)
+plt.savefig("./assets/wc.jpg", quality=80, bbox_inches="tight", pad_inches=0)
