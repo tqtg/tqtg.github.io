@@ -11,7 +11,7 @@
     <meta name="keywords"
         content="Trương Quốc Tuấn, Truong Quoc Tuan, Machine Learning, Information Retrieval, Deep Learning, Representation Learning, Multimodal Learning, Preference Learning, Recommender Systems, Text Mining, Sentiment Analysis, Computer Vision">
     <meta name="author" content="Quoc-Tuan Truong">
-    <link rel="stylesheet" type="text/css" href="./assets/basic-profile.css?v=1.18" title="Basic Profile" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/basic-profile.css?v=1.19" title="Basic Profile" media="all">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <title>Quoc-Tuan Truong</title>
@@ -58,12 +58,14 @@
                             onclick="trackEvent('https://www.hondafoundation.jp/en/yes.html', 'view', 'info', 'Honda Y-E-S Award');">Honda
                             Y-E-S Award</a> in 2016.
                     </p>
-                    <img src="./assets/wc.jpg?v=1.6" />
-                    <p class="mid">My research interests lie in the areas of machine learning and information retrieval.
-                        I have been working on multimodal sentiment analysis, cross-modal retrieval, multimodal
-                        representation learning and
-                        preference modeling for recommender systems.
+                    <img src="./assets/wc.jpg?v=1.7" />
+                    <p class="mid"><b>Research Interests:</b>
                     <p>
+                    <ul>
+                        <li>Machine Learning Methods</li>
+                        <li>Information Retrieval: Search and Recommender Systems</li>
+                        <li>Learning from the Web and Human Behavioral Data</li>
+                    </ul>
                     <p>
                         I try to open source everything that I do. If you can't find code or data
                         related
@@ -88,7 +90,7 @@
                 </div>
             </div>
 
-            <h3>Recent Updates</h3>
+            <h3>Recent News</h3>
             <ul id="highlights">
                 <li>
                     2021.05.10: Started research internship at Amazon, joining Product Graph team in Seattle, WA.
@@ -106,7 +108,8 @@
                     2021.03.08: Attended WSDM 2021 online.
                 </li>
                 <li>
-                    2021.02.18: Delivered a workshop on "Convolutional Neural Network" at NUS High School of Mathematics &
+                    2021.02.18: Delivered a workshop on "Convolutional Neural Network" at NUS High School of Mathematics
+                    &
                     Science, together with Prof. Hady W. Lauw.
                 </li>
                 <li>
@@ -567,7 +570,7 @@
                     const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' })
                     const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date);
 
-                    document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}.`;
+                    document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}`;
                 });
 
                 Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits");
