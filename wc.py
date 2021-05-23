@@ -54,7 +54,7 @@ STOPWORDS.update(["acm", "e", "g"])
 wc = WordCloud(
     font_path="./assets/fonts/Roboto-Regular.ttf",
     width=500,
-    height=250,
+    height=240,
     margin=2,
     background_color="white",
     color_func=color_fn,
