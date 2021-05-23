@@ -27,7 +27,7 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 .bio-col-2 img {width: 100%;border-radius: 8%;display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;}
 .bio-col-1 p {text-align: justify;}
 .bio-col-1 p.mid {margin: 15px 0 3px;}
-.bio-col-2 p {text-align:center;}
+.bio-col-2 p {text-align: center;margin-top: 3px}
 .bio-col-1 ul {margin-bottom:15px;}
 .bio-col-1 ul li{list-style-type:">  ";margin-left:15px;}
 
