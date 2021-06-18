@@ -1,4 +1,7 @@
 text = """
+Variational Learning from Implicit Bandit Feedback
+Recommendations are prevalent in Web applications (e.g., search ranking, item recommendation, advertisement placement). Learning from bandit feedback is challenging due to the sparsity of feedback limited to system-provided actions. In this work, we focus on batch learning from logs of recommender systems involving both bandit and organic feedbacks. We develop a probabilistic framework with a likelihood function for estimating not only explicit positive observations but also implicit negative observations inferred from the data. Moreover, we introduce a latent variable model for organic-bandit feedbacks to robustly capture user preference distributions. Next, we analyze the behavior of the new likelihood under two scenarios, i.e., with and without counterfactual re-weighting. For speedier item ranking, we further investigate the possibility of using Maximum-a-Posteriori (MAP) estimate instead of Monte Carlo (MC)-based approximation for prediction. Experiments on both real datasets as well as data from a simulation environment show substantial performance improvements over comparable baselines.
+
 Exploring Cross-Modality Utilization in Recommender Systems
 Multimodal recommender systems alleviate the sparsity of historical user-item interactions. They are commonly catalogued based on the type of auxiliary data (modality) they leverage, such as preference data plus user-network (social), user/item texts (textual), or item images (visual) respectively. One consequence of this categorization is the tendency for virtual walls to arise between modalities. For instance, a study involving images would compare to only baselines ostensibly designed for images. However, a closer look at existing models' statistical assumptions about any one modality would reveal that many could work just as well with other modalities. Therefore, we pursue a systematic investigation into several research questions: which modality one should rely on, whether a model designed for one modality may work with another, which model to use for a given modality. We conduct cross-modality and cross-model comparisons and analyses, yielding insightful results pointing to interesting future research directions for multimodal recommender systems.
 
@@ -28,10 +31,6 @@ Online reviews are prevalent. When recounting their experience with a product, s
 
 ###################################################################################################
 
-
-import os
-import random
-import string
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -68,4 +67,5 @@ wc = WordCloud(
 plt.figure()
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
-plt.savefig("./assets/wc.jpg", quality=80, bbox_inches="tight", pad_inches=0)
+plt.savefig("./assets/wc.jpg", bbox_inches="tight", pad_inches=0, pil_kwargs={"quality": 80})
+
