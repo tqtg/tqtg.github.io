@@ -12,6 +12,7 @@ ul#highlights{margin-bottom:5px;}
 ul#highlights li{display:none;list-style-type:">  ";margin:5px 15px;}
 ul#useful li{list-style-type:">  ";margin:5px 15px;}
 ul#papers li{list-style-type:none;padding-left:10px;margin-bottom: 15px;}
+ul#papers li.tuto{border-left:3px solid rgb(251, 192, 8);}
 ul#papers li.conf{border-left:3px solid rgb(53, 106, 159);}
 ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 #lastUpdated{display:block;clear:left;font-size:1.0em;color:#aaa;margin-top: 40px;border-top:3px solid #eee;padding-top: 5px;}
