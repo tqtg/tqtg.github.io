@@ -1,10 +1,10 @@
 *{margin:0;padding:0;}
-body{background:#fff top center no-repeat;color:#303030;font:84% 'Lato';line-height:1.6em;}
+body{background:#fff top center no-repeat;color:#303030;font:88% 'Lato';line-height:1.6em;}
 a{color:#4682B4;text-decoration:none;}
 a:hover{text-decoration:underline;}
-h1{color:#888;font-size:3.2em;line-height:1.1em;letter-spacing:-3px;margin:20px 0 0 0;}
-h2{font-size:2.0em;color:#333;margin:0 0 0px;letter-spacing:-1px;}
-h3{font-size:1.5em;margin:30px 0 20px 0;letter-spacing:-1px;border-bottom:1px solid #eee;}
+h1{color:#888;font-size:3.2em;line-height:1.1em;letter-spacing:0px;margin:20px 0 0 0;}
+h2{font-size:2.0em;color:#333;margin:0 0 0px;letter-spacing:0px;}
+h3{font-size:1.5em;margin:30px 0 15px 0;letter-spacing:0px;border-bottom:1px solid #eee;}
 h1,h2,h3{font-weight:700;line-height:1.6em;}
 #wrap{width: 920px;margin:0 auto;}
 #content{font-size:1.0em;padding: 40px;}
@@ -22,14 +22,14 @@ ul#papers li.jour{border-left:3px solid rgb(180, 57, 113);}
 .bio::after {content: "";clear: both;display: block;}
 
 /* For desktop: */
-.bio-col-1 {width: 80%;float: left;}
-.bio-col-2 {width: 16%;float: right;margin-top: 5px;}
-.bio-col-1 img {display: inline-block;width: 45%;margin: 15px 0 0 30px;float: right;}
+.bio-col-1 {width: 78%;float: left;}
+.bio-col-2 {width: 18%;float: right;margin-top: 5px;}
+.bio-col-1 img {display: inline-block;width: 45%;margin: 15px 0 0 15px;float: right;}
 .bio-col-2 img {width: 100%;border-radius: 8%;display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;}
 .bio-col-1 p {text-align: justify;}
-.bio-col-1 p.mid {margin: 15px 0 3px;}
+.bio-col-1 p.mid {margin: 13px 0 3px;}
 .bio-col-2 p {text-align: center;margin-top: 3px}
-.bio-col-1 ul {margin-bottom:15px;}
+.bio-col-1 ul {margin-bottom:13px;}
 .bio-col-1 ul li{list-style-type:">  ";margin-left:15px;}
 
 
