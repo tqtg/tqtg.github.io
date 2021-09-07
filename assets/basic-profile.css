@@ -51,9 +51,7 @@ h3 {
     border-bottom: 1px solid #eee;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 400;
     line-height: 1.6em;
 }
@@ -126,7 +124,6 @@ ul#papers li.jour {
     display: block;
 }
 
-
 /* For desktop: */
 
 .bio-col-1 {
@@ -177,7 +174,6 @@ ul#papers li.jour {
     list-style-type: ">  ";
     margin-left: 15px;
 }
-
 
 /* For mobile phones: */
 
