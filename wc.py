@@ -1,4 +1,7 @@
 text = """
+Multi-Modal Recommender Systems: Hands-On Exploration
+Recommender systems typically learn from user-item preference data such as ratings and clicks. This information is sparse in nature, i.e., observed user-item preferences often represent less than 5% of possible interactions. One promising direction to alleviate data sparsity is to leverage auxiliary information that may encode additional clues on how users consume items. Examples of such data (referred to as modalities) are social networks, item’s descriptive text, product images. The objective of this tutorial is to offer a comprehensive review of recent advances to represent, transform and incorporate the different modalities into recommendation models. Moreover, through practical hands-on sessions, we consider cross model/modality comparisons to investigate the importance of different methods and modalities. The hands-on exercises are conducted with Cornac (https://cornac.preferred.ai), a comparative framework for multimodal recommender systems. The materials are made available on https://preferred.ai/recsys21-tutorial/.
+
 Variational Learning from Implicit Bandit Feedback
 Recommendations are prevalent in Web applications (e.g., search ranking, item recommendation, advertisement placement). Learning from bandit feedback is challenging due to the sparsity of feedback limited to system-provided actions. In this work, we focus on batch learning from logs of recommender systems involving both bandit and organic feedbacks. We develop a probabilistic framework with a likelihood function for estimating not only explicit positive observations but also implicit negative observations inferred from the data. Moreover, we introduce a latent variable model for organic-bandit feedbacks to robustly capture user preference distributions. Next, we analyze the behavior of the new likelihood under two scenarios, i.e., with and without counterfactual re-weighting. For speedier item ranking, we further investigate the possibility of using Maximum-a-Posteriori (MAP) estimate instead of Monte Carlo (MC)-based approximation for prediction. Experiments on both real datasets as well as data from a simulation environment show substantial performance improvements over comparable baselines.
 
@@ -48,19 +51,34 @@ def color_fn(*args, **kwargs):
     return (r, g, b)
 
 
-STOPWORDS.update(["acm", "e", "g"])
+STOPWORDS.update(
+    [
+        "acm",
+        "e",
+        "g",
+        "work",
+        "moreover",
+        "show",
+        "using",
+        "one",
+        "two",
+        "may",
+        "available",
+        "well",
+    ]
+)
 
 wc = WordCloud(
-    font_path="./assets/fonts/Roboto-Regular.ttf",
+    font_path="./assets/fonts/Lato-Regular.ttf",
     width=500,
     height=240,
     margin=2,
     background_color="white",
     color_func=color_fn,
-    max_words=100,
+    max_words=42,
     stopwords=STOPWORDS,
-    min_font_size=4,
-    max_font_size=40,
+    min_font_size=10,
+    max_font_size=50,
     random_state=34,
 ).generate(text.strip().lower())
 
@@ -68,4 +86,3 @@ plt.figure()
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
 plt.savefig("./assets/wc.jpg", bbox_inches="tight", pad_inches=0, pil_kwargs={"quality": 80})
-
