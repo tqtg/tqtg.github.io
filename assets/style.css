@@ -128,7 +128,7 @@ ul#papers li.jour {
 .bio-col-1 img {
     display: inline-block;
     width: 45%;
-    margin: 20px 0 0 15px;
+    margin: 20px 0 0 20px;
     float: right;
 }
 
@@ -146,7 +146,7 @@ ul#papers li.jour {
 }
 
 .bio-col-1 p.mid {
-    margin: 13px 0 3px;
+    margin: 15px 0 3px;
 }
 
 .bio-col-2 p {
@@ -155,7 +155,7 @@ ul#papers li.jour {
 }
 
 .bio-col-1 ul {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 }
 
 .bio-col-1 ul li {
