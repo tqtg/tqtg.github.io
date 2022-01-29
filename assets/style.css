@@ -86,17 +86,12 @@ ul#papers li.jour {
     font-size: 1.0em;
     color: #aaa;
     margin-top: 40px;
-    border-top: 3px solid #eee;
+    border-top: 1px solid #eee;
     padding-top: 5px;
 }
 
 .clear {
     clear: both;
-}
-
-.bio {
-    border-top: 3px solid #eee;
-    padding-top: 20px;
 }
 
 .bio::after {
@@ -108,8 +103,16 @@ ul#papers li.jour {
 /* For desktop: */
 
 .bio-col-1 {
-    width: 78%;
+    width: 75%;
     float: left;
+}
+
+
+.contact {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
 }
 
 .bio-col-2 {
@@ -118,12 +121,6 @@ ul#papers li.jour {
     margin-top: 5px;
 }
 
-.bio-col-1 img {
-    display: inline-block;
-    width: 45%;
-    margin: 20px 0 0 20px;
-    float: right;
-}
 
 .bio-col-2 img {
     width: 100%;
@@ -131,27 +128,48 @@ ul#papers li.jour {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
 }
 
 .bio-col-1 p {
     text-align: justify;
 }
 
-.bio-col-1 p.mid {
-    margin: 15px 0 3px;
+.research {
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
-.bio-col-2 p {
-    text-align: center;
-    margin-top: 3px
+.research-col-1 {
+    width: 40%;
+    float: left;
+    margin-right: 40px;
 }
 
-.bio-col-1 ul {
+.research-col-2 {
+    width: 55%;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+
+.research-col-1 img {
+    width: 100%;
+    display: block;
+}
+
+
+.research-col-2 p.title {
+    margin-bottom: 5px;
+}
+
+
+.research-col-2 ul {
     margin-bottom: 15px;
 }
 
-.bio-col-1 ul li {
+.research-col-2 ul li {
     list-style-type: ">  ";
     margin-left: 15px;
     padding-left: 5px;
@@ -177,9 +195,12 @@ ul#papers li.jour {
         width: 100%;
     }
 
-    .bio-col-1 img {
-        width: 100%;
-        margin: 15px 0 15px;
+    .bio-col-1 {
+        text-align: center;
+    }
+
+    .bio-col-1 p.contact {
+        text-align: center;
     }
 
     .bio-col-2 {
@@ -189,4 +210,18 @@ ul#papers li.jour {
     .bio-col-2 img {
         width: 45%;
     }
+
+
+    [class*="research-col-"] {
+        width: 100%;
+    }
+
+    .research-col-1 {
+        margin-bottom: 20px;
+    }
+
+    .research-col-2 {
+        margin-bottom: 20px;
+    }
+
 }
