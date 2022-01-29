@@ -107,7 +107,6 @@ ul#papers li.jour {
     float: left;
 }
 
-
 .contact {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -120,7 +119,6 @@ ul#papers li.jour {
     float: right;
     margin-top: 5px;
 }
-
 
 .bio-col-2 img {
     width: 100%;
@@ -140,15 +138,15 @@ ul#papers li.jour {
 }
 
 .research-col-1 {
-    width: 40%;
+    width: 41%;
     float: left;
     margin-right: 40px;
 }
 
 .research-col-2 {
-    width: 55%;
+    width: 54%;
     float: left;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-bottom: 40px;
     text-align: justify;
 }
@@ -211,17 +209,8 @@ ul#papers li.jour {
         width: 45%;
     }
 
-
     [class*="research-col-"] {
         width: 100%;
-    }
-
-    .research-col-1 {
         margin-bottom: 20px;
     }
-
-    .research-col-2 {
-        margin-bottom: 20px;
-    }
-
 }
