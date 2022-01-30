@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
 
 <head>
@@ -35,6 +34,37 @@
                 'transport_type': 'beacon'
             });
         }
+    </script>
+    <script>
+        function lastUpdate() {
+            var Httpreq = new XMLHttpRequest();
+
+            Httpreq.addEventListener("load", function lastUpdateListener() {
+                var jsonObj = JSON.parse(this.responseText);
+                var date = Date.parse(jsonObj[0].commit.committer.date);
+                const dateTimeFormat = new Intl.DateTimeFormat('en', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: '2-digit'
+                })
+                const [{
+                    value: month
+                }, , {
+                    value: day
+                }, , {
+                    value: year
+                }] = dateTimeFormat.formatToParts(date);
+
+                document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}`;
+            });
+
+            Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits");
+            Httpreq.send();
+        }
+
+        window.onload = function () {
+            lastUpdate();
+        };
     </script>
 </head>
 
@@ -330,38 +360,7 @@
 
             <p id="lastUpdated"></p>
         </div>
-
-        <script>
-            function lastUpdate() {
-                var Httpreq = new XMLHttpRequest();
-
-                Httpreq.addEventListener("load", function lastUpdateListener() {
-                    var jsonObj = JSON.parse(this.responseText);
-                    var date = Date.parse(jsonObj[0].commit.committer.date);
-                    const dateTimeFormat = new Intl.DateTimeFormat('en', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: '2-digit'
-                    })
-                    const [{
-                        value: month
-                    }, , {
-                        value: day
-                    }, , {
-                        value: year
-                    }] = dateTimeFormat.formatToParts(date);
-
-                    document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}`;
-                });
-
-                Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits");
-                Httpreq.send();
-            }
-
-            window.onload = function () {
-                lastUpdate();
-            };
-        </script>
+    </div>
 </body>
 
 </html>
