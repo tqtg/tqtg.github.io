@@ -93,7 +93,7 @@ ul#papers li.jour {
     clear: both;
 }
 
-.bio::after {
+#bio::after {
     content: "";
     clear: both;
     display: block;
@@ -106,7 +106,7 @@ ul#papers li.jour {
     float: left;
 }
 
-.contact {
+#contact {
     margin-top: 3px;
     margin-bottom: 20px;
     padding-bottom: 8px;
@@ -131,9 +131,8 @@ ul#papers li.jour {
     text-align: justify;
 }
 
-.research {
+#research {
     margin-top: 20px;
-    margin-bottom: 50px;
 }
 
 .research-col-1 {
@@ -157,7 +156,7 @@ ul#papers li.jour {
 }
 
 
-.research-col-2 p.title {
+.research-col-2 p#title {
     margin-bottom: 5px;
 }
 
@@ -183,7 +182,7 @@ ul#papers li.jour {
         padding: 4%;
     }
 
-    .bio {
+    #bio {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -196,7 +195,7 @@ ul#papers li.jour {
         text-align: center;
     }
 
-    .bio-col-1 p.contact {
+    #contact {
         text-align: center;
     }
 

@@ -11,7 +11,7 @@
         content="Trương Quốc Tuấn, Truong Quoc Tuan, Machine Learning, Information Retrieval, Deep Learning, Representation Learning, Multimodal Learning, Preference Learning, Recommender Systems, Text Mining, Sentiment Analysis, Computer Vision">
     <meta name="author" content="Quoc-Tuan Truong">
 
-    <link rel="stylesheet" type="text/css" href="./assets/style.css?v=1.7" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css?v=1.8" media="all">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <title>Quoc-Tuan Truong</title>
@@ -58,7 +58,7 @@
                 document.getElementById("lastUpdated").innerHTML = `Last updated in ${month} ${year}`;
             });
 
-            Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits");
+            Httpreq.open("GET", "https://api.github.com/repos/tqtg/tqtg.github.io/commits?per_page=1");
             Httpreq.send();
         }
 
@@ -71,10 +71,10 @@
 <body>
     <div id="wrap">
         <div id="content">
-            <div class="bio">
+            <div id="bio">
                 <div class="bio-col-1">
                     <h2>Quoc-Tuan Truong</h2>
-                    <p class="contact"><a target="_blank" href="mailto:ping@qttruong.com"
+                    <p id="contact"><a target="_blank" href="mailto:ping@qttruong.com"
                             onclick="trackEvent('mailto:ping@qttruong.com', 'contact', 'info', 'email');">ping@qttruong.com</a>
                         &nbsp;|&nbsp;
                         <a target="_blank" href="./CV"
@@ -109,12 +109,12 @@
                 </div>
             </div>
 
-            <div class="research">
+            <div id="research">
                 <div class="research-col-1">
                     <img src="./assets/wc.jpg?v=1.11" />
                 </div>
                 <div class="research-col-2">
-                    <p class="title"><strong>Research Interests:</strong>
+                    <p id="title"><strong>Research Interests:</strong>
                     <p>
                     <ul>
                         <li>Machine Learning Methods</li>
