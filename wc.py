@@ -1,4 +1,7 @@
 text = """
+AmpSum: Adaptive Multiple-Product Summarization towards Improving Recommendation Captions
+In e-commerce websites, multiple related product recommendations are usually organized into “widgets”, each given a name, as a recommendation caption, to describe the products within. These recommendation captions are usually manually crafted and generic in nature, making it difficult to attach meaningful and informative names at scale. As a result, the captions are inadequate in helping customers to better understand the connection between the multiple recommendations and make faster product discovery. We propose an Adaptive Multiple-Product Summarization framework (AmpSum) that automatically and adaptively generates widget captions based on different recommended products. The multiplicity of products to be summarized in a widget caption is particularly novel. The lack of well-developed labels motivates us to design a weakly supervised learning approach with distant supervision to bootstrap the model learning from pseudo labels, and then fine-tune the model with a small amount of manual labels. To validate the efficacy of this method, we conduct extensive experiments on several product categories of Amazon data. The results demonstrate that our proposed framework consistently outperforms state-of-the-art baselines over 9.47-29.14% on ROUGE and 27.31% on METEOR. With case studies, we illustrate how AmpSum could adaptively generate summarization based on different product recommendations.
+
 Multi-Modal Recommender Systems: Hands-On Exploration
 Recommender systems typically learn from user-item preference data such as ratings and clicks. This information is sparse in nature, i.e., observed user-item preferences often represent less than 5% of possible interactions. One promising direction to alleviate data sparsity is to leverage auxiliary information that may encode additional clues on how users consume items. Examples of such data (referred to as modalities) are social networks, item’s descriptive text, product images. The objective of this tutorial is to offer a comprehensive review of recent advances to represent, transform and incorporate the different modalities into recommendation models. Moreover, through practical hands-on sessions, we consider cross model/modality comparisons to investigate the importance of different methods and modalities. The hands-on exercises are conducted with Cornac (https://cornac.preferred.ai), a comparative framework for multimodal recommender systems. The materials are made available on https://preferred.ai/recsys21-tutorial/.
 
@@ -72,10 +75,10 @@ wc = WordCloud(
     font_path="./assets/fonts/Lato-Regular.ttf",
     width=500,
     height=240,
-    margin=2,
+    margin=16,
     background_color="white",
     color_func=color_fn,
-    max_words=42,
+    max_words=32,
     stopwords=STOPWORDS,
     min_font_size=10,
     max_font_size=50,
