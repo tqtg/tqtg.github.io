@@ -102,8 +102,9 @@ ul#papers li.jour {
 /* For desktop: */
 
 .bio-col-1 {
-    width: 70%;
+    width: 75%;
     float: left;
+    padding-top: 15px;
 }
 
 #contact {
@@ -193,6 +194,7 @@ ul#papers li.jour {
 
     .bio-col-1 {
         text-align: center;
+        padding-top: 0;
     }
 
     #contact {
