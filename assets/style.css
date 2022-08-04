@@ -137,15 +137,15 @@ ul#papers li.jour {
 }
 
 .research-col-1 {
-    width: 41%;
+    width: 45%;
     float: left;
     margin-right: 40px;
 }
 
 .research-col-2 {
-    width: 54%;
+    width: 48%;
     float: left;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 40px;
     text-align: justify;
 }
@@ -211,6 +211,10 @@ ul#papers li.jour {
 
     [class*="research-col-"] {
         width: 100%;
-        margin-bottom: 20px;
+        /* margin-bottom: 10px; */
+    }
+
+    .research-col-1 {
+        margin-bottom: 10px;
     }
 }
