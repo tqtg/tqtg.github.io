@@ -44,6 +44,10 @@ h1, h2, h3 {
     line-height: 1.6em;
 }
 
+h3.div {
+    margin: 0px 0 15px 0;
+}
+
 #wrap {
     width: 920px;
     margin: 0 auto;
@@ -84,7 +88,7 @@ ul#papers li.jour {
     clear: left;
     font-size: 1.0em;
     color: #aaa;
-    margin-top: 40px;
+    margin-top: 50px;
     border-top: 1px solid #eee;
     padding-top: 5px;
 }
