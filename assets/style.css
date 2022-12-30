@@ -45,7 +45,8 @@ h1, h2, h3 {
 }
 
 h3.div {
-    margin: 0px 0 15px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #wrap {
@@ -56,6 +57,11 @@ h3.div {
 #content {
     font-size: 1.0em;
     padding: 40px;
+}
+
+.year {
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
 ul#useful li {
