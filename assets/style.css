@@ -116,22 +116,22 @@ ul#papers li.thesis {
 /* For desktop: */
 
 .bio-col-1 {
-    width: 75%;
+    width: 73%;
     float: left;
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
 #contact {
     margin-top: 5px;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #eee;
 }
 
 .bio-col-2 {
-    width: 20%;
+    width: 23%;
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .bio-col-2 img {
