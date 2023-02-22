@@ -50,7 +50,7 @@ h3.div {
 }
 
 #wrap {
-    width: 920px;
+    width: 980px;
     margin: 0 auto;
 }
 
@@ -131,7 +131,7 @@ ul#papers li.thesis {
 .bio-col-2 {
     width: 20%;
     float: right;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .bio-col-2 img {
@@ -151,13 +151,13 @@ ul#papers li.thesis {
 }
 
 .research-col-1 {
-    width: 45%;
+    width: 43%;
     float: left;
     margin-right: 40px;
 }
 
 .research-col-2 {
-    width: 48%;
+    width: 50%;
     float: left;
     margin-top: 3px;
     margin-bottom: 30px;
