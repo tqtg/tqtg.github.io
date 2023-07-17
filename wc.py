@@ -1,4 +1,7 @@
 text = """
+Topological Representation Learning for E-commerce Shopping Behaviors
+Learning compact representation from customer shopping behaviors is at the core of web-scale E-commerce recommender systems. At Amazon, we put great efforts into learning embedding of customer engagements in order to fuel multiple downstream tasks for better recommendation services. In this work, we define the notion of shopping trajectory that consists of customer interactions at the categorical level of products, then construct an end-to-end model namely C-STAR which is capable of learning rich embedding for representing the variable-length customer trajectory. C-STAR explicitly captures the trajectory distribution similarity and trajectory topological semantics, providing a coarse-to-fine trajectory representation learning paradigm both structurally and semantically. We evaluate the model on Amazon proprietary data as well as four public datasets, where the learned embeddings have shown to be effective for customer-centric tasks including customer segmentation and shopping trajectory completion.
+
 Multi-Modal Recommender Systems: Towards Addressing Sparsity, Comparability, and Explainability
 Web applications frequently feature a recommender system to help users discover items (e.g., products, content articles) of interest. This tutorial focuses on multi-modality, i.e., the use of side information such as text, images, or graphs to augment the preference data.  In particular, we cover several important aspects of multi-modality.  First is how models rely on the auxiliary modality to address the sparsity of preference observations in order to better bridge users and items. These models are typically designed along modality lines, which we cover comprehensively. Second is how to manage comparison and cross-utilization of multi-modal models.  The former is concerned with streamlining the treatment of models that share the same modality. The latter is concerned with using a model initially designed for one modality with another.  Third is how the auxiliary modalities could act as recommendation explanations, as recipients may find textual, visual, or graphical explanations more intuitive. This is a hands-on tutorial, whereby lectures are supplemented with exercises conducted with Cornac (https://cornac.preferred.ai), a comparative framework for multimodal recommender systems.
 
@@ -77,7 +80,8 @@ STOPWORDS.update(
         "several",
         "based",
         "result",
-        "experiments"
+        "experiments",
+        "proposed",
     ]
 )
 
@@ -88,11 +92,11 @@ wc = WordCloud(
     margin=16,
     background_color="white",
     color_func=color_fn,
-    max_words=32,
+    max_words=94,
     stopwords=STOPWORDS,
     min_font_size=10,
     max_font_size=50,
-    random_state=34,
+    random_state=94,
 ).generate(text.strip().lower())
 
 plt.figure()
