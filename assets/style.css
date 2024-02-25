@@ -116,7 +116,7 @@ ul#papers li.thesis {
 /* For desktop: */
 
 .bio-col-1 {
-    width: 75%;
+    width: 70%;
     float: left;
     /* padding-top: 15px; */
 }
@@ -129,9 +129,9 @@ ul#papers li.thesis {
 }
 
 .bio-col-2 {
-    width: 22%;
+    width: 21%;
     float: right;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .bio-col-2 img {
