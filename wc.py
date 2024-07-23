@@ -1,4 +1,7 @@
 text = """
+Shopping Trajectory Representation Learning with Pre-training for E-commerce Customer Understanding and Recommendation
+Learning compact representation from customer shopping behaviors is at the core of web-scale E-commerce recommender systems. At Amazon, we put great efforts into learning embedding of customer engagements in order to fuel multiple downstream tasks for better recommendation services. In this work, we define the notion of shopping trajectory that consists of customer interactions at the categorical level of products, then construct an end-to-end model namely C-STAR which is capable of learning rich embedding for representing the variable-length customer trajectory. C-STAR explicitly captures the trajectory distribution similarity and trajectory topological semantics, providing a coarse-to-fine trajectory representation learning paradigm both structurally and semantically. We evaluate the model on Amazon proprietary data as well as four public datasets, where the learned embeddings have shown to be effective for customer-centric tasks including customer segmentation and shopping trajectory completion.
+
 Cornac-AB: An Open-Source Recommendation Framework with Native A/B Testing Integration
 Recommender systems significantly impact user experience across diverse domains, yet existing frameworks often prioritize offline evaluation metrics, neglecting the crucial integration of A/B testing for forward-looking assessments. In response, this paper introduces a new framework seamlessly incorporating A/B testing into the Cornac recommendation library. Leveraging a diverse collection of model implementations in Cornac, our framework enables effortless A/B testing experiment setup from offline trained models. We introduce a carefully designed dashboard and a robust backend for efficient logging and analysis of user feedback. This not only streamlines the A/B testing process but also enhances the evaluation of recommendation models in an online environment. Demonstrating the simplicity of on-demand online model evaluations, our work contributes to advancing recommender system evaluation methodologies, underscoring the significance of A/B testing and providing a practical framework for implementation. The framework is open-sourced at https://github.com/PreferredAI/cornac-ab.
 
@@ -88,6 +91,9 @@ STOPWORDS.update(
         "oriented",
         "b",
         "multiple",
+        "task",
+        "capture",
+        "better",
     ]
 )
 
@@ -100,8 +106,8 @@ wc = WordCloud(
     color_func=color_fn,
     max_words=94,
     stopwords=STOPWORDS,
-    min_font_size=10,
-    max_font_size=50,
+    min_font_size=8,
+    max_font_size=48,
     random_state=94,
 ).generate(text.strip().lower())
 
